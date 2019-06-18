@@ -1,4 +1,5 @@
-2019-06-18 21:29:03 ERROR (MainThread) [homeassistant.setup] Error during setup of component octoprint
+2019-06-18 22:20:17 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
+2019-06-18 22:20:42 ERROR (MainThread) [homeassistant.setup] Error during setup of component octoprint
 Traceback (most recent call last):
   File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/setup.py", line 148, in _async_setup_component
     component.setup, hass, processed_config)  # type: ignore
@@ -13,58 +14,61 @@ Traceback (most recent call last):
   File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/octoprint.py", line 95, in setup
     for printer in config[DOMAIN]:
 KeyError: 'octoprint'
-2019-06-18 22:05:53 ERROR (Thread-17) [homeassistant.util.package] Unable to install package samsungctl[websocket]==0.7.1: Exception:
+2019-06-18 22:22:42 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall tts.google_say (c:73ce88d163ce4b4a8eea3646228ef354): entity_id=['media_player.samsung_6_series_49_ue49mu6175'], message=Hello? Is this home?>
 Traceback (most recent call last):
-  File "/srv/homeassistant/share/python-wheels/urllib3-1.19.1-py2.py3-none-any.whl/urllib3/connectionpool.py", line 594, in urlopen
-    chunked=chunked)
-  File "/srv/homeassistant/share/python-wheels/urllib3-1.19.1-py2.py3-none-any.whl/urllib3/connectionpool.py", line 391, in _make_request
-    six.raise_from(e, None)
-  File "<string>", line 2, in raise_from
-  File "/srv/homeassistant/share/python-wheels/urllib3-1.19.1-py2.py3-none-any.whl/urllib3/connectionpool.py", line 387, in _make_request
-    httplib_response = conn.getresponse()
-  File "/usr/lib/python3.5/http/client.py", line 1198, in getresponse
-    response.begin()
-  File "/usr/lib/python3.5/http/client.py", line 297, in begin
-    version, status, reason = self._read_status()
-  File "/usr/lib/python3.5/http/client.py", line 266, in _read_status
-    raise RemoteDisconnected("Remote end closed connection without"
-http.client.RemoteDisconnected: Remote end closed connection without response
-
-During handling of the above exception, another exception occurred:
-
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 137, in async_say_handle
+    options=options
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 306, in async_get_url
+    engine, key, message, use_cache, language, options)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 318, in async_get_tts_audio
+    message, language, options)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/google.py", line 83, in async_get_tts_audio
+    token.calculate_token, part)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/gtts_token/gtts_token.py", line 28, in calculate_token
+    seed = self._get_token_key()
+  File "/srv/homeassistant/lib/python3.5/site-packages/gtts_token/gtts_token.py", line 57, in _get_token_key
+    tkk_expr = re.search(".*?(TKK=.*?;)W.*?", line).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+2019-06-18 22:23:23 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall tts.google_say (c:f14f715347134a9b8bdc3f3ffcd26675): entity_id=['media_player.samsung_6_series_49_ue49mu6175'], message=I am robocop!>
 Traceback (most recent call last):
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/basecommand.py", line 215, in main
-    status = self.run(options, args)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/commands/install.py", line 353, in run
-    wb.build(autobuilding=True)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/wheel.py", line 749, in build
-    self.requirement_set.prepare_files(self.finder)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/req/req_set.py", line 380, in prepare_files
-    ignore_dependencies=self.ignore_dependencies))
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/req/req_set.py", line 620, in _prepare_file
-    session=self.session, hashes=hashes)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/download.py", line 821, in unpack_url
-    hashes=hashes
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/download.py", line 659, in unpack_http_url
-    hashes)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/download.py", line 853, in _download_http_url
-    stream=True,
-  File "/srv/homeassistant/share/python-wheels/requests-2.12.4-py2.py3-none-any.whl/requests/sessions.py", line 501, in get
-    return self.request('GET', url, **kwargs)
-  File "/srv/homeassistant/lib/python3.5/site-packages/pip/download.py", line 386, in request
-    return super(PipSession, self).request(method, url, *args, **kwargs)
-  File "/srv/homeassistant/share/python-wheels/requests-2.12.4-py2.py3-none-any.whl/requests/sessions.py", line 488, in request
-    resp = self.send(prep, **send_kwargs)
-  File "/srv/homeassistant/share/python-wheels/requests-2.12.4-py2.py3-none-any.whl/requests/sessions.py", line 609, in send
-    r = adapter.send(request, **kwargs)
-  File "/srv/homeassistant/share/python-wheels/CacheControl-0.11.7-py2.py3-none-any.whl/cachecontrol/adapter.py", line 47, in send
-    resp = super(CacheControlAdapter, self).send(request, **kw)
-  File "/srv/homeassistant/share/python-wheels/requests-2.12.4-py2.py3-none-any.whl/requests/adapters.py", line 423, in send
-    timeout=timeout
-  File "/srv/homeassistant/share/python-wheels/urllib3-1.19.1-py2.py3-none-any.whl/urllib3/connectionpool.py", line 643, in urlopen
-    _stacktrace=sys.exc_info()[2])
-  File "/srv/homeassistant/share/python-wheels/urllib3-1.19.1-py2.py3-none-any.whl/urllib3/util/retry.py", line 315, in increment
-    total -= 1
-TypeError: unsupported operand type(s) for -=: 'Retry' and 'int'
-2019-06-18 22:05:53 ERROR (MainThread) [homeassistant.requirements] Not initializing media_player.samsungtv because could not install requirement samsungctl[websocket]==0.7.1
-2019-06-18 22:05:53 ERROR (MainThread) [homeassistant.setup] Unable to prepare setup for platform media_player.samsungtv: Could not install all requirements.
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 137, in async_say_handle
+    options=options
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 306, in async_get_url
+    engine, key, message, use_cache, language, options)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/__init__.py", line 318, in async_get_tts_audio
+    message, language, options)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/tts/google.py", line 83, in async_get_tts_audio
+    token.calculate_token, part)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/gtts_token/gtts_token.py", line 28, in calculate_token
+    seed = self._get_token_key()
+  File "/srv/homeassistant/lib/python3.5/site-packages/gtts_token/gtts_token.py", line 57, in _get_token_key
+    tkk_expr = re.search(".*?(TKK=.*?;)W.*?", line).group(1)
+AttributeError: 'NoneType' object has no attribute 'group'
+2019-06-18 22:41:19 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:43:28 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:43:38 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:43:50 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:44:36 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:44:53 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:46:21 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111
+2019-06-18 22:46:25 WARNING (MainThread) [homeassistant.components.http.ban] Login attempt or request with invalid authentication from 192.168.1.111

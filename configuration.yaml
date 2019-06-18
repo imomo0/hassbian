@@ -69,3 +69,8 @@ cloud:
 group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
+
+# Octoprint
+octoprint:
+  host: 192.168.1.44
+  api_key: C053C25C292F455894850C27D3B58565
