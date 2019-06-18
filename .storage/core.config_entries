@@ -1,0 +1,17 @@
+{
+    "data": {
+        "entries": [
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "lifx",
+                "entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "source": "user",
+                "title": "LIFX",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

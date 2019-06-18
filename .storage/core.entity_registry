@@ -1,0 +1,125 @@
+{
+    "data": {
+        "entities": [
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "312e5799d6ca4b77a74e7f59d16ee66a",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_vitrineskap",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:b0:cd"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "1022e1ffea814889a3141cb87ea933c4",
+                "disabled_by": null,
+                "entity_id": "light.sofa_hyre",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:d5:20"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "6fa79bbf88d64f20b5a6130168f2f192",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_bokhylle",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:c0:f1"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "d2225c45c9564814abd1158c29c2848b",
+                "disabled_by": null,
+                "entity_id": "light.tv_hyre",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:aa:4c"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "4e716b18027f426b8a6b36dcc681b050",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_kjkkendr",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:b4:7d"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "0211480a0f024c91b216e043f13d15aa",
+                "disabled_by": null,
+                "entity_id": "light.sofa_venstre",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:b5:6f"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "9b907dcfeed146018c32d2f9ce324036",
+                "disabled_by": null,
+                "entity_id": "light.spisebord_2",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:30:bd:a4"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "9e8fba8cd27c4d0695467f38f35eac38",
+                "disabled_by": null,
+                "entity_id": "light.stuebord",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:30:f5:fb"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "7b509d0bf8954032b70ad1377798898c",
+                "disabled_by": null,
+                "entity_id": "light.tv_venstre",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:d5:1d"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "23ab0f2c5a9c474bb3733e9a3f4db167",
+                "disabled_by": null,
+                "entity_id": "light.spisebord_1",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:30:ef:e3"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "8fdaf2c28b19456682171ce04aa267bc",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_ovn",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:25:be:d5"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "e72db37648d640719080dd57afb0f234",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_dr_til_gang",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:d4:c9"
+            },
+            {
+                "config_entry_id": "5d706733164b4b11bc7a4b4281568c9c",
+                "device_id": "360491cd629d43afab83788c63d19316",
+                "disabled_by": null,
+                "entity_id": "light.spisestue_kommode",
+                "name": null,
+                "platform": "lifx",
+                "unique_id": "d0:73:d5:26:c4:a8"
+            }
+        ]
+    },
+    "key": "core.entity_registry",
+    "version": 1
+}
