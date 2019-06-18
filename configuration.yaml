@@ -23,7 +23,8 @@ frontend:
 config:
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-# http:
+http:
+  api_password: HeiM_As
 #   base_url: example.duckdns.org:8123
 
 # Checks for available updates
