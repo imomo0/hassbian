@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Home
+  name: Skivikveien 65
   # Location required to calculate the time the sun rises and sets
   latitude: 0
   longitude: 0
@@ -9,7 +9,7 @@ homeassistant:
   # metric for Metric, imperial for Imperial
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: UTC
+  time_zone: NO
   # Customization file
   customize: !include customize.yaml
 
@@ -61,7 +61,8 @@ sensor:
 
 # Text to speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
 
 # Cloud
 cloud:
@@ -75,3 +76,12 @@ octoprint:
   - host: 192.168.1.44
     api_key: C053C25C292F455894850C27D3B58565
     name: Prusa MK3S
+    sensors:
+      monitored_conditions:
+        - 'Temperatures'
+
+camera:
+  - platform: mjpeg
+    name: Prusa MK3S
+    still_image_url: http://192.168.1.44/webcam/?action=snapshot
+    mjpeg_url: http://192.168.1.44/webcam/?action=stream

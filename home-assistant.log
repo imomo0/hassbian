@@ -1,2 +1,230 @@
 2019-06-18 23:08:28 WARNING (MainThread) [homeassistant.components.http] legacy_api_password support has been enabled. If you don't require it, remove the 'api_password' from your http config.
 2019-06-18 23:08:32 ERROR (Thread-8) [homeassistant.components.octoprint] Endpoint: printer Failed to update OctoPrint status.   Error: 409 Client Error: CONFLICT for url: http://192.168.1.44:80/api/printer
+2019-06-18 23:14:52 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:5984e49d28d14a2296b9f4a7bbfb981b)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-18 23:21:43 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:2754903eddbd41dba38007ce6f29087c)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-18 23:31:09 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:ea70b6961b904800b903e60a38951c0f)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-18 23:31:56 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:46d6d6cafbc642c3b1c775e26b6a5309)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-18 23:33:59 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:671c76504bea4545aa68249df904f0a9)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-18 23:35:51 ERROR (MainThread) [homeassistant.core] Error executing service <ServiceCall homeassistant.restart (c:cf65a5a09808453db1cad2e3bb6e43c5)>
+Traceback (most recent call last):
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/core.py", line 1177, in _event_to_service_call
+    await service_handler.func(service_call)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/__init__.py", line 129, in async_handle_core_service
+    errors = await conf_util.async_check_ha_config_file(hass)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/config.py", line 796, in async_check_ha_config_file
+    check_ha_config_file, hass)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/scripts/check_config.py", line 319, in check_ha_config_file
+    core_config = CORE_CONFIG_SCHEMA(core_config)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 267, in __call__
+    return self._compiled([], data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 589, in validate_dict
+    return base_validate(path, iteritems(data), out)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 381, in validate_mapping
+    cval = cvalue(key_path, value)
+  File "/srv/homeassistant/lib/python3.5/site-packages/voluptuous/schema_builder.py", line 811, in validate_callable
+    return schema(data)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/helpers/config_validation.py", line 408, in time_zone
+    if dt_util.get_time_zone(value) is not None:
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/util/dt.py", line 48, in get_time_zone
+    return pytz.timezone(time_zone_str)
+  File "/srv/homeassistant/lib/python3.5/site-packages/pytz/__init__.py", line 160, in timezone
+    if zone.upper() == 'UTC':
+AttributeError: 'bool' object has no attribute 'upper'
+2019-06-21 18:36:28 ERROR (Thread-12) [homeassistant.components.octoprint] Endpoint: job Failed to update OctoPrint status.   Error: HTTPConnectionPool(host='192.168.1.44', port=80): Max retries exceeded with url: /api/job (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x69242370>, 'Connection to 192.168.1.44 timed out. (connect timeout=9)'))
+2019-06-21 18:36:50 WARNING (MainThread) [homeassistant.components.sensor] Updating octoprint sensor took longer than the scheduled update interval 0:00:30
+2019-06-21 18:36:50 ERROR (Thread-10) [homeassistant.components.octoprint] Endpoint: printer Failed to update OctoPrint status.   Error: HTTPConnectionPool(host='192.168.1.44', port=80): Max retries exceeded with url: /api/printer (Caused by ConnectTimeoutError(<urllib3.connection.HTTPConnection object at 0x692423f0>, 'Connection to 192.168.1.44 timed out. (connect timeout=9)'))
+2019-06-23 04:12:47 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 241, in _step
+    result = coro.throw(exc)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/discovery.py", line 172, in scan_devices
+    results = await hass.async_add_job(_discover, netdisco)
+  File "/usr/lib/python3.5/asyncio/futures.py", line 380, in __iter__
+    yield self  # This tells Task to wait for completion.
+  File "/usr/lib/python3.5/asyncio/tasks.py", line 304, in _wakeup
+    future.result()
+  File "/usr/lib/python3.5/asyncio/futures.py", line 293, in result
+    raise self._exception
+  File "/usr/lib/python3.5/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/srv/homeassistant/lib/python3.5/site-packages/homeassistant/components/discovery.py", line 198, in _discover
+    netdisco.scan()
+  File "/srv/homeassistant/lib/python3.5/site-packages/netdisco/discovery.py", line 63, in scan
+    self.gdm.scan()
+  File "/srv/homeassistant/lib/python3.5/site-packages/netdisco/gdm.py", line 22, in scan
+    self.update()
+  File "/srv/homeassistant/lib/python3.5/site-packages/netdisco/gdm.py", line 89, in update
+    data.splitlines() if ':' in line)}
+  File "/srv/homeassistant/lib/python3.5/site-packages/netdisco/gdm.py", line 87, in <dictcomp>
+    data = {k: v.strip() for (k, v) in (
+ValueError: too many values to unpack (expected 2)
+2019-06-24 00:08:32 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: {'release-notes': '0.94.4', 'version': 'https://www.home-assistant.io/blog/2019/06/05/release-94/'}
+2019-06-25 00:08:32 ERROR (MainThread) [homeassistant.components.updater] Got unexpected response: {'release-notes': '0.94.4', 'version': 'https://www.home-assistant.io/blog/2019/06/05/release-94/'}
